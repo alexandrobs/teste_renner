@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:gravity="center_horizontal"
-    android:layout_height="fill_parent" android:layout_width="fill_parent">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
 
     <LinearLayout
         android:id="@+id/cabecalho"
@@ -11,7 +13,10 @@
         android:layout_height="40dp"
         android:background="#FBFBFB"
         android:orientation="horizontal"
-        android:padding="10dip">
+        android:padding="10dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,22 +44,25 @@
                 android:layout_weight="1"
                 android:baselineAlignBottom="false"
                 android:src="@mipmap/ic_renner_logo"
+                android:contentDescription="@string/texto_imagem_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iv_pesquisar_produto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/texto_pesquisar_produto"
                 android:src="@drawable/ic_baseline_search_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/iv_abrir_sacola_pagina_inicial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/texto_abrir_sacola_pagina_inicial"
                 android:src="@drawable/ic_baseline_shopping_bag_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -63,73 +71,93 @@
 
     </LinearLayout>
 
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_alignParentBottom="true" android:gravity="center_vertical"
-        android:background="#F7F8F7" android:layout_height="wrap_content"
-        android:id="@+id/rodape" android:padding="10dip">
+    <LinearLayout
+        android:id="@+id/rodape"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F7F8F7"
+        android:gravity="center_vertical"
+        android:padding="10dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/iv_abrir_loja_virtual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/texto_abrir_loja_virtual"
                 android:src="@drawable/ic_baseline_shopping_bag_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/iv_abrir_blog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="62dp"
+                android:contentDescription="@string/texto_abrir_blog"
                 android:src="@drawable/ic_baseline_info_24"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintStart_toEndOf="@+id/iv_abrir_loja_virtual"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/iv_abrir_favoritos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="62dp"
+                android:contentDescription="@string/texto_abrir_favoritos"
                 android:src="@drawable/ic_baseline_favorite_24"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintStart_toEndOf="@+id/iv_abrir_blog"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/iv_abrir_cartoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="62dp"
+                android:contentDescription="@string/texto_abrir_cartoes"
                 android:src="@drawable/ic_baseline_credit_card_24"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/iv_abrir_favoritos"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/iv_abrir_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="62dp"
                 android:layout_marginEnd="8dp"
+                android:contentDescription="@string/texto_abrir_menu"
                 android:src="@drawable/ic_baseline_menu_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/iv_abrir_cartoes"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/rodape"
-        android:layout_below="@id/cabecalho"
-        android:background="#000055" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_tela_inicial"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@+id/cabecalho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho" />
 
-    <TextView android:id="@android:id/empty" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_above="@id/rodape"
-        android:text="Lista vazia" />
-</RelativeLayout>
+    <Button
+        android:id="@+id/btn_comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comprar"
+        android:contentDescription="@string/texto_botao_comprar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vp_tela_inicial" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

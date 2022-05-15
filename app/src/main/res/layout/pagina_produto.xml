@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_200"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FBFBFB"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_voltar_pagina_produto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/texto_voltar_pagina_produto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/iv_abrir_sacola_pagina_produto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/texto_abrir_sacola"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_shopping_bag_24" />
+
+        <ImageView
+            android:id="@+id/iv_compartilhar_produto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/texto_compartilhar_produto"
+            app:layout_constraintEnd_toStartOf="@+id/iv_abrir_sacola_pagina_produto"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_tela_inicial"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/cabecalho"
+        app:layout_constraintBottom_toTopOf="@+id/btn_adicionar_produto_sacola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho" />
+
+    <Button
+        android:id="@+id/btn_adicionar_produto_sacola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADICIONAR À SACOLA"
+        android:textSize="12sp"
+        android:contentDescription="@string/texto_adicionar_produto_sacola"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

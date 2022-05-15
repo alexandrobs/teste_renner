@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Lojas Renner</string>
+    <string name="texto_imagem_logo">logo renner</string>
+    <string name="texto_pesquisar_produto">pesquisar produto</string>
+    <string name="texto_abrir_sacola_pagina_inicial">abrir sacola página inicial</string>
+    <string name="texto_abrir_loja_virtual">abrir loja virtual</string>
+    <string name="texto_abrir_blog">abrir blog</string>
+    <string name="texto_abrir_favoritos">abrir favoritos</string>
+    <string name="texto_abrir_cartoes">abrir cartões</string>
+    <string name="texto_abrir_menu">abrir menu</string>
+    <string name="texto_botao_comprar">botão comprar</string>
+    <string name="texto_voltar_pagina_produto">voltar página produto</string>
+    <string name="texto_abrir_sacola">abrir sacola</string>
+    <string name="texto_compartilhar_produto">compartilhar produto</string>
+    <string name="texto_adicionar_produto_sacola">adicionar produto sacola</string>
 </resources>
