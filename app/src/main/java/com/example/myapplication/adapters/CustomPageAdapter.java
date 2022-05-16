@@ -37,7 +37,7 @@ public class CustomPageAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View itemView = mLayoutInflater.inflate(R.layout.pagina_item_produto, container, false);
+        View itemView = mLayoutInflater.inflate(R.layout.product_item_page, container, false);
         ImageView imageView = itemView.findViewById(R.id.iv_produto_tela_inicial);
         imageView.setImageResource(mResources[position]);
         container.addView(itemView);

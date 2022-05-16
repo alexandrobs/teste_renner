@@ -23,7 +23,7 @@ public class ProductPage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pagina_produto);
+        setContentView(R.layout.product_page);
 
         mPageView = findViewById(R.id.vp_tela_inicial);
         mBtnAdicionarProdutoSacola = findViewById(R.id.btn_adicionar_produto_sacola);

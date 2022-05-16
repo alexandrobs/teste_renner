@@ -29,7 +29,7 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pagina_principal);
+        setContentView(R.layout.main_page);
 
         mVpTelaInicial = findViewById(R.id.vp_tela_inicial);
         mBtnComprar = findViewById(R.id.btn_comprar);
