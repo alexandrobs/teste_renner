@@ -14,6 +14,23 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.myapplication.R;
 import com.example.myapplication.adapters.CustomPageAdapter;
 
+/***
+ *
+ * Criado por: Alexandro Silva em 13/05/2022
+ * Código hospedado no Github: https://github.com/alexandrobs/teste_renner
+ *
+ * Desafio Android - Meta / Lojas Renner
+ * App teste Lojas Renner versão 0.1
+ * 1. página inicial
+ * 2. página de produto
+ * 3. cabeçalho e rodapé
+ * 4. carrosel com produtos
+ * 5. botão de compra
+ * 6. tela do produto com variante de cor e tamanho
+ * 7. acessibilidade com content description
+ * 8. botões para abrir outras features e voltar tela
+ */
+
 public class MainPage extends AppCompatActivity {
 
     private Button mBtnComprar;
